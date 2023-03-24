@@ -11,13 +11,13 @@ describe('Login functionality for bynder application', () => {
   })
 
   it('1. Validate Login with valid credentials', () => {
-    LoginPage.loginToApp(userdata.username, userdata.password)
+    cy.login(userdata.validcredentials.username, userdata.validcredentials.password)
     DashaboardPage.logout()
     cy.contains(userdata.validcredentials.logoutmsg).should('have.text',userdata.validcredentials.logoutmsg)
   })
 
   it('2. Verify Login with invalid credentials', () => {
-    LoginPage.loginToApp(userdata.username, userdata.wrongpassword)
+    LoginPage.loginToApp(userdata.invalidcredentials.username, userdata.invalidcredentials.password)
     cy.contains(userdata.invalidcredentials.invalidcredentialmsg).should('have.text',userdata.invalidcredentials.invalidcredentialmsg)
   })
 
