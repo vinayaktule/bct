@@ -12,7 +12,7 @@ npm install cypress --save-dev
 
 ## Running Cypress from scripts configuration mentioned in package.json file 
 
-## Opening Cypress App
+### Opening Cypress App
 
 ```bash
 npm run cypress:open
