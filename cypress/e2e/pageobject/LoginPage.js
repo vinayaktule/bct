@@ -8,7 +8,7 @@ class LoginPage{
     }
 
     logoutStatus(){
-        cy.get(loginPageOR.notificationPopup)
+        return cy.get(loginPageOR.notificationPopup).invoke('text')
     }
 }
 export default new LoginPage()
