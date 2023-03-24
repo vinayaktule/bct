@@ -1,7 +1,16 @@
 {
-  "username": "qa-assignment",
-  "password": "qa-Bynder2023!",
-  "wrongpassword":"qa-Bynder2023",
-  "invalidcredentialmsg":"You have entered an incorrect username or password.",
-  "logoutmsg": "You have successfully logged out."
+  "validcredentials" :{
+    "username": "qa-assignment",
+    "password": "qa-Bynder2023!"
+  },
+
+  "invalidcredentials" :{
+    "username": "qa-assignment",
+    "password": "qa-Bynder2023"
+  },
+  
+  "logoutmsg": "You have successfully logged out.",
+  "invalidcredentialmsg":"You have entered an incorrect username or password."
 }
+
+
