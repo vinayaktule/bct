@@ -46,7 +46,7 @@ npm run cy:chrome_headed
   ```
 
 ### generate allure report
-1.  install dependency on mac
+1. install dependency on mac
    ```bash
    sudo npm install -g allure-commandline
    ```
