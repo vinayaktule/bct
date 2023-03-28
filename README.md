@@ -42,3 +42,11 @@ npm run cy:chrome_headed
 - npm run cy:run --headed --browser electron
 - npm run cy:run --headless --browser electron
 - npm run cy:run --headless --browser electron cypress/e2e/test/loginassignment.cy.js
+
+### generate allure report
+1. To generate allure reports for all tests 
+  - cypress run --spec cypress/e2e/**/**.js --env allure=true
+2. To generate allure reports at particular file path
+  - cypress run --env allure=true allureResultsPath= /allure-results
+3. To generate html format from allure reports for all tests
+  - allure generate allure-results --clean -o allure-reports
