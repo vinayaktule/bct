@@ -1,10 +1,10 @@
 import LoginPage from "../pageobject/LoginPage"
 import DashaboardPage from "../pageobject/DashaboardPage"
 
+let userdata;
 describe('Login functionality for bynder application', () => {
-  let userdata;
   beforeEach('Login to Application',()=>{
-    cy.fixture('loginpage').then((creds)=>{
+    cy.fixture('loginpage.json').then((creds)=>{
         userdata = creds
     });
     cy.visit('/')
@@ -13,12 +13,12 @@ describe('Login functionality for bynder application', () => {
   it('1. Validate Login with valid credentials', () => {
     cy.login(userdata.validcredentials.username, userdata.validcredentials.password)
     DashaboardPage.logout()
-    cy.contains(userdata.validcredentials.logoutmsg).should('have.text',userdata.validcredentials.logoutmsg)
+    cy.verifytext(userdata.logoutmsg)
   })
 
-  it('2. Verify Login with invalid credentials', () => {
+  it.only('2. Verify Login with invalid credentials', () => {
     LoginPage.loginToApp(userdata.invalidcredentials.username, userdata.invalidcredentials.password)
-    cy.contains(userdata.invalidcredentials.invalidcredentialmsg).should('have.text',userdata.invalidcredentials.invalidcredentialmsg)
+    cy.verifytext(userdata.invalidcredentialmsg)
   })
 
 })

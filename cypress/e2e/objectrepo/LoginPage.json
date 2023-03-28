@@ -1,6 +1,6 @@
 {
     "notificationPopup":".notification h1",
-    "notificationTxt": ".cbox_messagebox_error .cbox_messagebox",
+    "notificationTxt": ".cbox_messagebox",
     "usernameTxt":"#inputEmail",
     "passwordTxt":"#inputPassword",
     "loginBtn":":submit"

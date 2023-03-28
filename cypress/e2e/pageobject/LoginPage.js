@@ -6,9 +6,5 @@ class LoginPage{
         cy.get(loginPageOR.passwordTxt).type(password)
         cy.get(loginPageOR.loginBtn).first().click()
     }
-
-    logoutStatus(){
-        return cy.get(loginPageOR.notificationPopup).invoke('text')
-    }
 }
 export default new LoginPage()
