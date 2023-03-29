@@ -16,7 +16,7 @@ describe('Login functionality for bynder application', () => {
     cy.verifytext(userdata.logoutmsg)
   })
 
-  it.only('2. Verify Login with invalid credentials', () => {
+  it('2. Validate Login with invalid credentials', () => {
     LoginPage.loginToApp(userdata.invalidcredentials.username, userdata.invalidcredentials.password)
     cy.verifytext(userdata.invalidcredentialmsg)
   })

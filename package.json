@@ -4,23 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run": "cypress run --spec cypress/e2e/**/**.js --env allure=true",
+    "cy:run": "cypress run --spec cypress/e2e/**/**.js",
     "cy:open": "cypress open",
     "cy:chrome": "cypress run --headless --browser chrome --spec cypress/e2e/**/**.js",
     "cy:chrome_headed": "cypress run --headed --browser chrome --spec cypress/e2e/**/**.js",
     "cy:allure": "cypress run --env allure=true allureResultsPath= /allure-results",
-    "cy:generate": "allure generate allure-results --clean -o allure-reports",
+    "cy:report": "allure generate allure-results --clean -o allure-reports",
     "cy:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
-    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+    "cy:parallel": "cypress-parallel -s cy:allure -t 2 -d cypress/e2e/test/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.35.2",
-    "cypress": "^12.6.0"
-  },
-  "dependencies": {
-    "yarn": "^1.22.19"
+    "cypress": "^12.6.0",
+    "cypress-parallel": "^0.12.0"
   }
 }

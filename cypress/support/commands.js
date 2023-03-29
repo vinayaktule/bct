@@ -6,7 +6,7 @@ Cypress.Commands.add('login', (username, password) => {
 })
 
 Cypress.Commands.add('verifytext', (expected_msg) => {
-    cy.get('.notification h1')
+    cy.get('.cbox_messagebox')
     .invoke('text')
     .should('equal',expected_msg)
 })

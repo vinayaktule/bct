@@ -4,6 +4,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   watchForFileChanges: false,
+  screenshotOnRunFailure : true,
   video : true,
   e2e: {
     baseUrl : "https://wave-trial.getbynder.com/login/",
